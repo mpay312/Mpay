@@ -13,11 +13,31 @@ body {
 }
 
 #landing {
+  position: relative;
   min-height: 100svh;
   cursor: pointer;
   background: #075a28 url("assets/background.png") center / cover no-repeat;
   padding: clamp(18px, 4vw, 55px);
 }
+
+.site-footer {
+  position: absolute;
+  right: clamp(14px, 2.5vw, 36px);
+  bottom: clamp(12px, 2vw, 28px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 11px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .38);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.2;
+  backdrop-filter: blur(4px);
+}
+
+.site-footer a { color: #fff; text-underline-offset: 2px; }
+.site-footer h1 { margin: 0; font: inherit; font-weight: 500; }
 
 .tile-grid {
   display: grid;
@@ -61,6 +81,14 @@ video {
     aspect-ratio: 941 / 1672;
     padding: 0;
     background: #075a28 url("assets/mobile-background.png") top center / 100% auto no-repeat;
+  }
+
+  .site-footer {
+    right: 10px;
+    bottom: 10px;
+    font-size: 9px;
+    gap: 7px;
+    padding: 5px 7px;
   }
 
   /* Карточки уже собраны в вертикальном фоне; поверх него остаётся только видео. */
